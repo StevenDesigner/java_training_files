@@ -10,10 +10,11 @@ public class completeprogram {
         // Print Statement
         System.out.println("Hello, Java!");
 
-        // Using Scanner for input (Example)
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter your name: ");
-        String name = input.nextLine();
-        System.out.println("Welcome, " + name + "!");
+        try (// Using Scanner for input (Example)
+        Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter your name: ");
+            String name = input.nextLine();
+            System.out.println("Welcome, " + name + "!");
+        }
     }
 }
