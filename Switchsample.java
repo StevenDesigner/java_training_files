@@ -1,9 +1,9 @@
 public class Switchsample {
     public static void main(String[] args) {
 
-        String day="ramu";
+        String name="ramu";
         
-        switch(day){
+        switch(name){
             case "ramu":
             System.out.println("sunday");
             break;
