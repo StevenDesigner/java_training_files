@@ -9,8 +9,11 @@ public class MaxSubArray {
         int result = findMaxSum(arr, k);
         System.out.println("Maximum sum of subarray of size " + k + " is: " + result);
     }
-
-    private static int findMaxSum(int[] arr, int k) {
+    //m =9
+    // w =5
+    // {2, 1, 5, 1, 3, 2};
+    //                  |
+    private static  int findMaxSum(int[] arr, int k) {
         int windowSum = 0, maxSum = 0;
 
         for (int i = 0; i < arr.length; i++) {

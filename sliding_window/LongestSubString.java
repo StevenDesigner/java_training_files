@@ -4,10 +4,15 @@ import java.util.HashSet;
 
 public class LongestSubString {
      public static void main(String[] args) {
-        String input = "abcabcbb";
+        String input = "stephenreaj";
         int result = lengthOfLongestSubstring(input);
         System.out.println("Length of longest substring without repeating characters: " + result);
     }
+// mx= 5
+   //  "a   b  c  a  c  c  e  b  b"
+   //                  l            
+   //                      r   
+
 
      private static int lengthOfLongestSubstring(String input) {
         HashSet<Character> set= new HashSet<>();

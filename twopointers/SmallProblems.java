@@ -1,13 +1,11 @@
 package twopointers;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
 
 public class SmallProblems {
 
     public static void main(String[] args) {
-        int[] arr = {1, 1, 3, 4, 4, 5, 6,7,7,8,9,10};
+        int[] arr = {1, 1,3, 4, 4, 5, 6,7,7,8,9,10};
         // reverse(arr);
         // System.out.println(Arrays.toString(arr));
 
@@ -15,8 +13,11 @@ public class SmallProblems {
         // System.out.println(max(arr));
         // freequency(arr);
         // System.out.println(targetCheck(arr, 7));
-        // removeDuplicatesTwopointer(arr);
+        removeDuplicatesTwopointer(arr);
+        // moveZeroes(arr);
         System.out.println(Arrays.toString(arr));
+
+
     }
 
     // public static void reverse(int[] arr) {
@@ -63,9 +64,9 @@ public class SmallProblems {
     //     }
     // }
 
-    public static ArrayList<Integer> removeDuplicate(ArrayList<Integer> arr) {
-        return new ArrayList<>(new HashSet<>(arr));
-    }
+    // public static ArrayList<Integer> removeDuplicate(ArrayList<Integer> arr) {
+    //     return new ArrayList<>(new HashSet<>(arr));
+    // }
     
     // public static boolean targetCheck(int[] arr, int target) {
     //     //can only be used in sorted arrays
@@ -83,6 +84,9 @@ public class SmallProblems {
     //     return false;
     // }
 
+        // int[] arr = {1, 2,3, 4, 4, 5,0, 0,0, 6,7,7,8,9,10}; //0 //1 //2 
+        //i     0  1  2 3 4 5 6 7 8
+        //index 0  1  2 2 3 4 5 5 6
 
     // public static void moveZeroes(int[] arr){
     //     int index=0;
@@ -96,13 +100,15 @@ public class SmallProblems {
     //     }
     // }
 
-    // public static void removeDuplicatesTwopointer(int[] arr){
-    //     int i=0;
-    //     for(int j=1; j<arr.length; j++){
-    //         if(arr[i]!=arr[j]){
-    //             i++;
-    //             arr[i]=arr[j];
-    //         }
-    //     }
-    // }
+    // {1, 3,3, 4, 4, 5, 6,7,7,8,9,10};
+
+    public static void removeDuplicatesTwopointer(int[] arr){
+        int i=0;
+        for(int j=1; j<arr.length; j++){
+            if(arr[i]!=arr[j]){
+                i++;
+                arr[i]=arr[j];
+            }
+        }
+    }
 }
